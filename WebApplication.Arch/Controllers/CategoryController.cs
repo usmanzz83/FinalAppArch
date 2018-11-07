@@ -25,6 +25,7 @@ namespace WebApplication.Arch.Controllers
         // GET: Category
         public ActionResult Index()
         {
+            // Get all categories and products data
             IEnumerable<Category> Categories =  oCategoryService.Queryable();
             return View(Categories);
         }
