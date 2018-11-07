@@ -1,0 +1,24 @@
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\Urf.Service.Pattern.dll.config
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\Urf.Service.Pattern.dll
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\Urf.Service.Pattern.pdb
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\System.Net.Http.dll
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\TrackableEntities.Common.dll
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\Urf.Repository.Pattern.dll
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\Urf.Repository.Pattern.pdb
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\Urf.Repository.Pattern.dll.config
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\bin\Debug\TrackableEntities.Common.xml
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\obj\Debug\Service.Pattern.csprojResolveAssemblyReference.cache
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\obj\Debug\Service.Pattern.csproj.CoreCompileInputs.cache
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\obj\Debug\Urf.Service.Pattern.dll
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Service.Pattern\obj\Debug\Urf.Service.Pattern.pdb
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\bin\Debug\Urf.Service.Pattern.dll.config
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\bin\Debug\Urf.Service.Pattern.dll
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\bin\Debug\Urf.Service.Pattern.pdb
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\bin\Debug\System.Net.Http.dll
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\bin\Debug\Urf.Repository.Pattern.dll
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\bin\Debug\Urf.Repository.Pattern.pdb
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\bin\Debug\Urf.Repository.Pattern.dll.config
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\obj\Debug\Service.Pattern.csprojResolveAssemblyReference.cache
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\obj\Debug\Service.Pattern.csproj.CoreCompileInputs.cache
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\obj\Debug\Urf.Service.Pattern.dll
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Service.Pattern\obj\Debug\Urf.Service.Pattern.pdb

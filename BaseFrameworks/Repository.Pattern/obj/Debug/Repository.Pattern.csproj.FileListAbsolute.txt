@@ -1,0 +1,15 @@
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\bin\Debug\Urf.Repository.Pattern.dll.config
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\bin\Debug\Urf.Repository.Pattern.dll
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\bin\Debug\Urf.Repository.Pattern.pdb
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\bin\Debug\TrackableEntities.Common.dll
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\bin\Debug\TrackableEntities.Common.xml
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\obj\Debug\Repository.Pattern.csproj.CoreCompileInputs.cache
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\obj\Debug\Urf.Repository.Pattern.dll
+C:\Users\3578\Desktop\Temp Code\URF.NET-master\main\Source\Repository.Pattern\obj\Debug\Urf.Repository.Pattern.pdb
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern\bin\Debug\Urf.Repository.Pattern.dll.config
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern\bin\Debug\Urf.Repository.Pattern.dll
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern\bin\Debug\Urf.Repository.Pattern.pdb
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csproj.CoreCompileInputs.cache
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern\obj\Debug\Urf.Repository.Pattern.dll
+C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern\obj\Debug\Urf.Repository.Pattern.pdb

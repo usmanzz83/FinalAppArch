@@ -1,0 +1,36 @@
+﻿@using Application.Entities.Entities
+
+@model IEnumerable<Category>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>List of All Categories</h2>
+
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>@Html.DisplayNameFor(model => model.CategoryName) </th>
+                <th>@Html.DisplayNameFor(model => model.Description)</th>
+                <th>Total Products</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(listItem => item.CategoryID)</td>
+                    <td>@Html.DisplayFor(listItem => item.CategoryName)</td>
+                    <td>@Html.DisplayFor(listItem => item.Description)</td>
+                    <td>@item.Products.Count()</td>
+                    <td> </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
