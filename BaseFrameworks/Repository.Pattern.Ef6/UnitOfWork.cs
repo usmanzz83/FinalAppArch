@@ -114,5 +114,10 @@ namespace Repository.Pattern.Ef6
         {
             Transaction.Rollback();
         }
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
     }
 }

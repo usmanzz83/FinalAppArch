@@ -32,3 +32,14 @@ C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern
 C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csproj.CoreCompileInputs.cache
 C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern.Ef6\obj\Debug\Urf.Repository.Pattern.Ef6.dll
 C:\Users\3578\source\repos\WebApplication.Arch\BaseFrameworks\Repository.Pattern.Ef6\obj\Debug\Urf.Repository.Pattern.Ef6.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csprojResolveAssemblyReference.cache
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csproj.CoreCompileInputs.cache
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\obj\Debug\Urf.Repository.Pattern.Ef6.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\obj\Debug\Urf.Repository.Pattern.Ef6.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\bin\Debug\Urf.Repository.Pattern.Ef6.dll.config
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\bin\Debug\Urf.Repository.Pattern.Ef6.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\bin\Debug\Urf.Repository.Pattern.Ef6.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\bin\Debug\System.Net.Http.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\bin\Debug\Urf.Repository.Pattern.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\bin\Debug\Urf.Repository.Pattern.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef6\bin\Debug\Urf.Repository.Pattern.dll.config

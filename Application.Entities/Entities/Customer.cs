@@ -6,7 +6,10 @@ namespace Application.Entities.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Customer
+
+    using Repository.Pattern.Ef6;
+
+    public partial class Customer : Entity
     {
         [StringLength(5)]
         public string CustomerID { get; set; }

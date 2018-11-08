@@ -5,7 +5,7 @@ using TrackableEntities;
 
 namespace Repository.Pattern.UnitOfWork
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         int SaveChanges();
         int ExecuteSqlCommand(string sql, params object[] parameters);

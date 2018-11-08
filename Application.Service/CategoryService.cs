@@ -18,6 +18,7 @@ namespace Application.Service
 
     public class CategoryService : Service<Category> , ICategoryService
     {
+
         public CategoryService(IRepositoryAsync<Category> repository) : base(repository)
         {
 
