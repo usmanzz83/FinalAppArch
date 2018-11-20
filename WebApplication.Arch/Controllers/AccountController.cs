@@ -61,6 +61,14 @@ namespace WebApplication.Arch.Controllers
             return View();
         }
 
+
+        [AllowAnonymous]
+        public ActionResult Login1()
+        {
+            return View();
+        }
+
+
         //
         // POST: /Account/Login
         [HttpPost]

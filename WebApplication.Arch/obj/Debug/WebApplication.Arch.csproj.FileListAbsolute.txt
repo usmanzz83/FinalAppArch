@@ -198,3 +198,8 @@ C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\obj\Debug\
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\obj\Debug\WebApplication.Arch.csproj.CoreCompileInputs.cache
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\obj\Debug\WebApplication.Arch.dll
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\obj\Debug\WebApplication.Arch.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\bin\AutoMapper.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\bin\System.ValueTuple.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\bin\AutoMapper.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\bin\AutoMapper.xml
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch\bin\System.ValueTuple.xml

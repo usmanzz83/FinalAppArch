@@ -1,0 +1,274 @@
+﻿
+
+@using Application.Entities.Entities
+
+@model IEnumerable<Category>
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="panel panel-default ">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-2x"></i> Category Data</h3>
+    </div>
+    <div class="panel-body">
+
+        <a class="btn btn-success" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("AddCategory", "Category")')"><i class="fa fa-plus"></i> Add Category</a>
+
+        <div>
+
+        </div>
+
+        <div class="table-responsive ">
+
+            <table id="assets-data-table" class="table table-striped table-responsive table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>@Html.DisplayNameFor(model => model.CategoryName) </th>
+                        <th>@Html.DisplayNameFor(model => model.Description)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</div>
+
+<button type="button" class="btn btn-outline-secondary btn-toggle-filter" data-toggle="button" aria-pressed="false">
+    <i class="fa fa-filter"></i>
+    <span>Toggle Div</span>
+    <i class="fa fa-angle-double-down"></i>
+</button>
+
+<div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary  btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown<b class="caret"></b>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <li>
+            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+        </li>
+        <li class="divider"></li>
+        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+    </div>
+</div>
+
+
+<div class="btn-group">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        SMART Export <b class="caret"></b>
+</button>
+    <div class="dropdown-menu">
+        <li>
+            <a href="javascript:void(0)" class="dropdown-item export-data-button" data-url="/backend/Plugins/SmartStore.CommonExportProviders/Export?systemName=Exports.SmartStoreCustomerXml&amp;exportAll=False">
+                <i class="fa fa-fw fa-code"></i>
+                <span>Export selected to XML</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="dropdown-item export-data-button" data-url="/backend/Plugins/SmartStore.CommonExportProviders/Export?systemName=Exports.SmartStoreCustomerCsv&amp;exportAll=False">
+                <i class="fa fa-fw fa-file-text-o"></i>
+                <span>Export selected to CSV</span>
+            </a>
+        </li>
+
+        <div class="dropdown-divider"></div>
+        <li>
+            <a href="javascript:void(0)" class="dropdown-item export-data-button" data-url="/backend/Plugins/SmartStore.CommonExportProviders/Export?systemName=Exports.SmartStoreCustomerXml&amp;exportAll=True">
+                <i class="fa fa-fw fa-code"></i>
+                <span>Export all to XML</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="dropdown-item export-data-button" data-url="/backend/Plugins/SmartStore.CommonExportProviders/Export?systemName=Exports.SmartStoreCustomerCsv&amp;exportAll=True">
+                <i class="fa fa-fw fa-file-text-o"></i>
+                <span>Export all to CSV</span>
+            </a>
+        </li>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // export button clicked
+            $('a.export-data-button').click(function (e) {
+                e.preventDefault();
+
+                if (confirm("Would you like to proceed?")) {
+                    var form = '<form id="StartCommonExportProvidersForm" action="' + $(this).data('url') + '" method="post">';
+
+                    if (typeof selectedIds !== 'undefined') {
+                        form += '<input type="hidden" name="selectedIds" value="' + selectedIds.join(',') + '" />';
+                    }
+                    form += '</form>';
+
+                    $('body').append(form);
+                    $('#StartCommonExportProvidersForm').submit();
+                }
+
+                return false;
+            });
+
+        });
+    </script>
+</div>
+
+
+<li class="btn btn-default dropdown open">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+        <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu dropdown-user">
+        <li>
+            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        </li>
+    </ul>
+</li>
+
+<div class="row mt-3 grid-filter" style="display: none">
+    <div class="panel panel-default ">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-2x"></i> Toggle Data</h3>
+        </div>
+        <div class="panel-body">
+            <button type="submit" id="search-customers" name="search-customers" class="btn btn-warning btn-block">
+                <span>Apply Filter</span>
+            </button>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+    var Popup, oTable;
+        $(document).ready(function () {
+
+            // Filter toggler
+            $('.btn-toggle-filter').on('click', function (e) {
+                $('.grid-filter').slideToggle("slow");
+            });
+
+             oTable = $('#assets-data-table').DataTable({
+                ajax: {
+                    url: "/Category/GetCategories",
+                    type: "Get",
+                    datatype: "json"
+                },
+                columns: [
+                    { "data": "CategoryID" },
+                    { "data": "CategoryName" },
+                    { "data": "Description" },
+                    {
+                        "data": "CategoryID", "render": function (data) {
+                            return "<a class='btn btn-default btn-primary btn-sm' href='@Url.Action("AddCategory","Category")/" + data + "'> <i class='fa fa-pencil'></i> Edit</a><a class='btn btn-danger btn-sm' style='margin-left:5px' onclick=Delete(" + data + ")><i class='fa fa-trash'></i> Delete</a>";
+                        },
+                        "orderable": false,
+                        "searchable": false,
+                        "width": "170px"
+                    }
+
+                ],
+                searching: false,
+                scrollX:false,
+                "language": {
+
+                    "emptyTable": "No data found, Please add data."
+                }
+
+            });
+        });
+
+    function PopupForm(url) {
+        var formDiv = $('<div/>');
+        $.get(url)
+            .done(function (response) {
+                formDiv.html(response);
+
+                Popup = formDiv.dialog({
+                    autoOpen: true,
+                    resizable: false,
+                    title: 'Add Category',
+                    height: 500,
+                    width: 700,
+                    close: function () {
+                        Popup.dialog('destroy').remove();
+                    }
+
+                });
+            });
+        }
+
+        function SubmitForm(form) {
+            $.validator.unobtrusive.parse(form);
+            if ($(form).valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.action,
+                    data: $(form).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            Popup.dialog('close');
+                            dataTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            })
+
+                        }
+                    }
+                });
+            }
+            return false;
+        }
+
+
+
+        function Delete(id) {
+            if(confirm('Are You Sure to Delete this Category ?'))
+            {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("DeleteCategory", "Category")/' + id,
+                    success: function (data) {
+                        if (data.success)
+                        {
+                            oTable.ajax.reload();
+
+                            $.notify(data.message, {
+                                globalPosition: "top center",
+                                className: "success"
+                            })
+
+                        }
+                    }
+
+                });
+            }
+        }
+
+    </script>
+}
+

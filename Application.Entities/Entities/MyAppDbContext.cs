@@ -32,9 +32,9 @@ namespace Application.Entities.Entities
             modelBuilder.Configurations.Add(new Mapping.ProductMap());
 
 
-            //modelBuilder.Entity<Customer>()
-            //    .Property(e => e.CustomerID)
-            //    .IsFixedLength();
+            modelBuilder.Entity<Customer>()
+                .Property(e => e.CustomerID)
+                .IsFixedLength();
 
             modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Employees1)

@@ -160,3 +160,8 @@ C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\obj\
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\obj\Debug\WebApplication.Arch.Tests.csproj.CoreCompileInputs.cache
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\obj\Debug\WebApplication.Arch.Tests.dll
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\obj\Debug\WebApplication.Arch.Tests.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\AutoMapper.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\System.ValueTuple.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\AutoMapper.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\AutoMapper.xml
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\System.ValueTuple.xml

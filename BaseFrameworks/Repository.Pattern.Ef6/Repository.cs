@@ -40,6 +40,11 @@ namespace Repository.Pattern.Ef6
         {
             entity.TrackingState = TrackingState.Added;
 
+            ///Temp Code for adding.
+            Set.Add(entity);
+            Context.SaveChanges();
+
+
             if (traverseGraph)
                 Context.ApplyChanges(entity);
             else
@@ -74,14 +79,17 @@ namespace Repository.Pattern.Ef6
 
         public void Delete(params object[] keyValues)
         {
+            
             var entity = Set.Find(keyValues);
             Delete(entity);
         }
 
         public virtual void Delete(TEntity entity)
         {
-            entity.TrackingState = TrackingState.Deleted;
-            Context.ApplyChanges(entity);
+            Set.Remove(entity);
+            Context.SaveChanges();
+            //entity.TrackingState = TrackingState.Deleted;
+            //Context.ApplyChanges(entity);
         }
 
         public virtual void Delete(object id)

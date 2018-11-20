@@ -8,6 +8,9 @@ using Application.Service;
 using Repository.Pattern.UnitOfWork;
 using Application.Entities.Entities;
 
+using AutoMapper;
+
+
 namespace WebApplication.Arch.Controllers
 {
     public class CategoryController : Base.BaseController
@@ -29,8 +32,9 @@ namespace WebApplication.Arch.Controllers
             // Get all categories and products data
             IEnumerable<Category> Categories =  oCategoryService.Queryable();
             return View(Categories);
+            //return View();
         }
-
+        
         // GET: Category/Details/5
         public ActionResult Details(int id)
         {
@@ -102,5 +106,84 @@ namespace WebApplication.Arch.Controllers
                 return View();
             }
         }
+
+
+
+        public ActionResult Ajax_CategoryList()
+        {
+            return View();
+        }
+
+
+        public JsonResult GetCategories()
+        {
+            List<Category> Categories = oCategoryService.Queryable().ToList();
+            List<Models.mCategory> mCatg = new List<Models.mCategory>();
+            foreach (var o in Categories)
+            {
+                mCatg.Add(new Models.mCategory { CategoryID = o.CategoryID, CategoryName = o.CategoryName, Description = o.Description });
+            }
+
+            return Json(new { data = mCatg }, JsonRequestBehavior.AllowGet);
+        }
+
+
+        [HttpGet]
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult AddCategory(Models.mCategory oCategory)
+        {
+            //Mapper.Initialize(cfg => cfg.CreateMap<Models.mCategory , Category>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Models.mCategory, Category>());
+
+            var mapper = config.CreateMapper(); // Mapper(config);
+            Category oCatg = mapper.Map<Category>(oCategory);            
+
+            //Category oCatg  = Mapper.Map<Category>(oCategory);
+
+            if (ModelState.IsValid)
+            {
+                oCategoryService.Insert(oCatg);
+
+                try
+                {
+                    oUnitofWork.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                return Json(new { success = true, message = "Saved Successfully" }, JsonRequestBehavior.AllowGet);
+            }
+            else
+                return View(oCategory);
+        }
+
+
+
+        [HttpPost]
+        public ActionResult DeleteCategory(int id)
+        {
+            var Catg = oCategoryService.Find(id);
+            oCategoryService.Delete(Catg);
+
+            try
+            {
+                oUnitofWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return Json(new { success = true, message = "Saved Successfully" }, JsonRequestBehavior.AllowGet); ;
+        }
+
     }
 }
