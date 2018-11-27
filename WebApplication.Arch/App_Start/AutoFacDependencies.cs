@@ -29,9 +29,11 @@ namespace WebApplication.Arch
             builder.RegisterType<CategoryController>();
 
             /// Unit of work Dependencies
-            builder.RegisterType<MyAppDbContext>().As<DbContext>();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWorkAsync>();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+            builder.RegisterType<MyAppDbContext>().As<DbContext>().InstancePerLifetimeScope();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWorkAsync>().InstancePerLifetimeScope();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+
+
 
 
             var container = builder.Build();

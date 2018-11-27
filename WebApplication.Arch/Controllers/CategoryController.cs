@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using Application.Service;
 using Repository.Pattern.UnitOfWork;
 using Application.Entities.Entities;
-
+using Repository.Pattern.Ef6;
 using AutoMapper;
 
 
@@ -30,7 +30,7 @@ namespace WebApplication.Arch.Controllers
         public ActionResult Index()
         {
             // Get all categories and products data
-            IEnumerable<Category> Categories =  oCategoryService.Queryable();
+            IEnumerable<Category> Categories = oCategoryService.Queryable();
             return View(Categories);
             //return View();
         }

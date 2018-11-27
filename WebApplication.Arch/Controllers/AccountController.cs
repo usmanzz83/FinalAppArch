@@ -65,6 +65,11 @@ namespace WebApplication.Arch.Controllers
         [AllowAnonymous]
         public ActionResult Login1()
         {
+            if (Request.IsAuthenticated)
+            {
+                LogOff();
+            }
+            
             return View();
         }
 

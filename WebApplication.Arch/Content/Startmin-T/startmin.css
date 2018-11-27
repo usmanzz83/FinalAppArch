@@ -753,7 +753,7 @@ table.dataTable thead .sorting:after {
 
 #loader {
     transition: all 0.3s ease-in-out;
-    opacity: 1;
+    opacity: 0;
     visibility: visible;
     position: fixed;
     height: 100vh;
@@ -803,3 +803,24 @@ table.dataTable thead .sorting:after {
     }
 }
 
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
