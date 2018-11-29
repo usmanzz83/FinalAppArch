@@ -89,6 +89,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CategoryControllerTest.cs" />
     <Compile Include="Controllers\CustomerControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
@@ -100,6 +101,30 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Application.Entities\Application.Entities.csproj">
+      <Project>{42ebf9e9-10f8-4243-a572-baebd5ccff5b}</Project>
+      <Name>Application.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.Repository\Application.Repository.csproj">
+      <Project>{af834588-6569-4d7a-a97d-28c6a4166a37}</Project>
+      <Name>Application.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.Service\Application.Service.csproj">
+      <Project>{fff85448-7dde-417c-8d74-0bcbc07c3ca1}</Project>
+      <Name>Application.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseFrameworks\Repository.Pattern.Ef6\Repository.Pattern.Ef60.csproj">
+      <Project>{f68a1d19-93fb-47c1-a22b-42bea3e4fd8c}</Project>
+      <Name>Repository.Pattern.Ef60</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseFrameworks\Repository.Pattern\Repository.Pattern.csproj">
+      <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>
+      <Name>Repository.Pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseFrameworks\Service.Pattern\Service.Pattern.csproj">
+      <Project>{86f86650-ee3c-4372-8fec-40c2fe015022}</Project>
+      <Name>Service.Pattern</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApplication.Arch\WebApplication.Arch.csproj">
       <Project>{274C1E59-B004-4350-BB5B-921CCE8679E0}</Project>
       <Name>WebApplication.Arch</Name>

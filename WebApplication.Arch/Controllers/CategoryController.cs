@@ -35,79 +35,6 @@ namespace WebApplication.Arch.Controllers
             //return View();
         }
         
-        // GET: Category/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Category/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Category/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Category/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Category/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Category/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Category/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-
 
         public ActionResult Ajax_CategoryList()
         {
@@ -123,7 +50,6 @@ namespace WebApplication.Arch.Controllers
             {
                 mCatg.Add(new Models.mCategory { CategoryID = o.CategoryID, CategoryName = o.CategoryName, Description = o.Description });
             }
-
             return Json(new { data = mCatg }, JsonRequestBehavior.AllowGet);
         }
 
@@ -148,7 +74,10 @@ namespace WebApplication.Arch.Controllers
 
             if (ModelState.IsValid)
             {
-                oCategoryService.Insert(oCatg);
+                if (oCatg.CategoryID == 0 )
+                    oCategoryService.Insert(oCatg);
+                else
+                    oCategoryService.Update(oCatg);
 
                 try
                 {
@@ -156,13 +85,26 @@ namespace WebApplication.Arch.Controllers
                 }
                 catch (Exception ex)
                 {
+                    return Json(new { success = false, message = "Error while saving data. Data not saved." }, JsonRequestBehavior.AllowGet);
                     throw ex;
                 }
 
-                return Json(new { success = true, message = "Saved Successfully" }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = true, message = "Saved Successfully." }, JsonRequestBehavior.AllowGet);
             }
             else
                 return View(oCategory);
+        }
+
+        [HttpGet]
+        public ActionResult EditCategory(int id)
+        {
+            var Categ = oCategoryService.Find(id);
+
+
+            Models.mCategory oCatg = new Models.mCategory { CategoryID = Categ.CategoryID, CategoryName = Categ.CategoryName, Description = Categ.Description };
+
+
+            return View("AddCategory", oCatg);
         }
 
 

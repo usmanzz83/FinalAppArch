@@ -12,6 +12,7 @@ namespace WebApplication.Arch.Models
 
 
         public int CategoryID { get; set; }
+
         [Required(ErrorMessage = "Category name is a required feild.")]
         public string CategoryName { get; set; }
 

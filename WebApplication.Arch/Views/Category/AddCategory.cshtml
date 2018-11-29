@@ -10,8 +10,10 @@
 {
     @Html.AntiForgeryToken()
 
-
-
+    if (Model != null)
+    {
+        @Html.HiddenFor(model => model.CategoryID)
+    }
 
     <div class="modal-body">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
