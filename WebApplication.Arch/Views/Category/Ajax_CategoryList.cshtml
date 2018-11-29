@@ -200,12 +200,12 @@
             });
         });
 
-    function PopupForm(url) {
-        var formDiv = $('<div/>');
+        function PopupForm(url) {
+            
+            var formDiv = $('<div/>'); 
         $.get(url)
             .done(function (response) {
-                formDiv.html(response);
-                $.fn.button.noConflict();
+                formDiv.html(response); 
                 Popup = formDiv.dialog({
                     autoOpen: true,
                     resizable: false,
@@ -230,7 +230,8 @@
                     success: function (data) {
                         if (data.success) {
                             Popup.dialog('close');
-                            dataTable.ajax.reload();
+
+                            oTable.ajax.reload();
 
                             $.notify(data.message, {
                                 globalPosition: "top center",
@@ -267,6 +268,11 @@
 
                 });
             }
+        }
+
+
+        function ClosePopup() {
+            Popup.dialog('destroy').remove();
         }
 
     </script>

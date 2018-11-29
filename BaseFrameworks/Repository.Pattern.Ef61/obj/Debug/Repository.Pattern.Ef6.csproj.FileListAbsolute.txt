@@ -1,0 +1,4 @@
+C:\Users\3578\Desktop\beyourmarket-master\src\Frameworks\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csprojResolveAssemblyReference.cache
+C:\Users\3578\Desktop\beyourmarket-master\src\Frameworks\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csproj.CoreCompileInputs.cache
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef61\obj\Debug\Repository.Pattern.Ef6.csprojResolveAssemblyReference.cache
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern.Ef61\obj\Debug\Repository.Pattern.Ef6.csproj.CoreCompileInputs.cache

@@ -649,9 +649,9 @@
       <Project>{fff85448-7dde-417c-8d74-0bcbc07c3ca1}</Project>
       <Name>Application.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BaseFrameworks\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj">
+    <ProjectReference Include="..\BaseFrameworks\Repository.Pattern.Ef6\Repository.Pattern.Ef60.csproj">
       <Project>{f68a1d19-93fb-47c1-a22b-42bea3e4fd8c}</Project>
-      <Name>Repository.Pattern.Ef6</Name>
+      <Name>Repository.Pattern.Ef60</Name>
     </ProjectReference>
     <ProjectReference Include="..\BaseFrameworks\Repository.Pattern\Repository.Pattern.csproj">
       <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>

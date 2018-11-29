@@ -13,7 +13,7 @@ using WebApplication.Arch.Models;
 namespace WebApplication.Arch.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : Base.BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
