@@ -42,3 +42,6 @@ C:\Users\3578\source\repos\usmanzz83\FinalAppArch\Application.Entities\obj\Debug
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\Application.Entities\obj\Debug\Application.Entities.csproj.CoreCompileInputs.cache
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\Application.Entities\obj\Debug\Application.Entities.dll
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\Application.Entities\obj\Debug\Application.Entities.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\Application.Entities\obj\Debug\Application.Entities.Migrations.AddConcurrencyCategory.resources
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\Application.Entities\obj\Debug\Application.Entities.csproj.GenerateResource.Cache
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\Application.Entities\obj\Debug\Application.Entities.Migrations.AddConcurrencyCategory2.resources

@@ -19,9 +19,14 @@ namespace WebApplication.Arch.Models
         [Required(ErrorMessage = "Category description is a required feild.")]
         public string Description { get; set; }
 
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
+
 
         public string CategoryTitle { get { return CategoryName + Description; } }
 
         public string Title() => CategoryName + Description;
+
+
     }
 }

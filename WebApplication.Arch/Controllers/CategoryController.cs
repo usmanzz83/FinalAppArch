@@ -74,17 +74,21 @@ namespace WebApplication.Arch.Controllers
 
             if (ModelState.IsValid)
             {
-                if (oCatg.CategoryID == 0 )
-                    oCategoryService.Insert(oCatg);
-                else
-                    oCategoryService.Update(oCatg);
+
+                
 
                 try
                 {
+                    if (oCatg.CategoryID == 0)
+                        oCategoryService.Insert(oCatg);
+                    else
+                        oCategoryService.Update(oCatg);
+
                     oUnitofWork.SaveChanges();
                 }
                 catch (Exception ex)
                 {
+                    ModelState.AddModelError("SOME ERROR", ex.Message);
                     return Json(new { success = false, message = "Error while saving data. Data not saved." }, JsonRequestBehavior.AllowGet);
                     throw ex;
                 }
@@ -101,7 +105,7 @@ namespace WebApplication.Arch.Controllers
             var Categ = oCategoryService.Find(id);
 
 
-            Models.mCategory oCatg = new Models.mCategory { CategoryID = Categ.CategoryID, CategoryName = Categ.CategoryName, Description = Categ.Description };
+            Models.mCategory oCatg = new Models.mCategory { CategoryID = Categ.CategoryID, CategoryName = Categ.CategoryName, Description = Categ.Description, RowVersion = Categ.RowVersion };
 
 
             return View("AddCategory", oCatg);

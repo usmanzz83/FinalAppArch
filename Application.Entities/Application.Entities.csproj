@@ -60,6 +60,15 @@
     <Compile Include="Entities\MyAppDbContext.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Migrations\201811300214506_AddConcurrencyCategory.cs" />
+    <Compile Include="Migrations\201811300214506_AddConcurrencyCategory.Designer.cs">
+      <DependentUpon>201811300214506_AddConcurrencyCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811300220053_AddConcurrencyCategory2.cs" />
+    <Compile Include="Migrations\201811300220053_AddConcurrencyCategory2.Designer.cs">
+      <DependentUpon>201811300220053_AddConcurrencyCategory2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +85,13 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811300214506_AddConcurrencyCategory.resx">
+      <DependentUpon>201811300214506_AddConcurrencyCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811300220053_AddConcurrencyCategory2.resx">
+      <DependentUpon>201811300220053_AddConcurrencyCategory2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

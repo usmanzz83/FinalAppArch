@@ -24,6 +24,9 @@ namespace Application.Entities.Entities
         public string Description { get; set; }
         public byte[] Picture { get; set; }
 
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }
     }

@@ -19,3 +19,4 @@ C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Patt
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csproj.CoreCompileInputs.cache
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern\obj\Debug\Urf.Repository.Pattern.dll
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern\obj\Debug\Urf.Repository.Pattern.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\BaseFrameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
