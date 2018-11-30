@@ -24,6 +24,7 @@ namespace Application.Entities.Entities
         public string Description { get; set; }
         public byte[] Picture { get; set; }
 
+        // For Concurrency
         [Timestamp]
         public byte[] RowVersion { get; set; }
 
