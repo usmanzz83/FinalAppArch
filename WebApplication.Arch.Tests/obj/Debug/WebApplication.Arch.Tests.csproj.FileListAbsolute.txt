@@ -155,7 +155,6 @@ C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\Urf.Service.Pattern.pdb
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\Urf.Service.Pattern.dll.config
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\System.Net.Http.Formatting.xml
-C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\TrackableEntities.Common.xml
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\obj\Debug\WebApplication.Arch.Tests.csprojResolveAssemblyReference.cache
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\obj\Debug\WebApplication.Arch.Tests.csproj.CoreCompileInputs.cache
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\obj\Debug\WebApplication.Arch.Tests.dll
@@ -165,3 +164,6 @@ C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\AutoMapper.pdb
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\AutoMapper.xml
 C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\System.ValueTuple.xml
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\Application.Repository.dll
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\Application.Repository.pdb
+C:\Users\3578\source\repos\usmanzz83\FinalAppArch\WebApplication.Arch.Tests\bin\Debug\Application.Repository.dll.config

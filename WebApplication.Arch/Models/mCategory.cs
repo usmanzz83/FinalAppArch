@@ -4,11 +4,13 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using Application.Entities;
 
 namespace WebApplication.Arch.Models
 {
     public class mCategory
     {
+        
 
 
         public int CategoryID { get; set; }
@@ -21,6 +23,8 @@ namespace WebApplication.Arch.Models
 
         [Timestamp]
         public byte[] RowVersion { get; set; }
+
+        public List<Application.Entities.Entities.Product> Products { get; set; }
 
 
         public string CategoryTitle { get { return CategoryName + Description; } }

@@ -46,6 +46,7 @@ namespace WebApplication.Arch
 
             bundles.Add(new StyleBundle("~/StartminContent/datatables").Include(
                       "~/Content/Startmin-T/dataTables/dataTables.bootstrap.css",
+                      "~/Content/Startmin-T/dataTables/dataTables.bootstrap4.min.css",
                       "~/Content/Startmin-T/dataTables/dataTables.responsive.css"));
 
             bundles.Add(new StyleBundle("~/StartminContent/css").Include(

@@ -11,7 +11,7 @@
 @{
     Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
 }
-
+<link href="~/Content/Site.css" rel="stylesheet" />
 <div class="panel panel-default ">
     <div class="panel-heading">
         <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-2x"></i> Category Data</h3>
@@ -29,6 +29,7 @@
             <table id="assets-data-table" class="table table-striped table-responsive table-hover">
                 <thead>
                     <tr>
+                        <th></th>
                         <th>#</th>
                         <th>@Html.DisplayNameFor(model => model.CategoryName) </th>
                         <th>@Html.DisplayNameFor(model => model.Description)</th>
@@ -177,20 +178,26 @@
                     datatype: "json"
                 },
                 columns: [
+                    {
+                        "className": 'details-control',
+                        "orderable": false,
+                        "data": null,
+                        "defaultContent": ''
+                    },
                     { "data": "CategoryID" },
                     { "data": "CategoryName" },
-                    { "data": "Description" },
+                    { "data": "Description", "searchable": false },
                     {
                         "data": "CategoryID", "render": function (data) {
                             return "<a class='btn btn-default btn-primary btn-sm' onclick=PopupForm('@Url.Action("EditCategory", "Category")/" + data + "')> <i class='fa fa-pencil'></i> Edit</a><a class='btn btn-danger btn-sm' style='margin-left:5px' onclick=Delete(" + data + ")><i class='fa fa-trash'></i> Delete</a>";
                         },
                         "orderable": false,
-                        "searchable": false,
+                        "searchable": false, 
                         "width": "170px"
                     }
 
                 ],
-                searching: false,
+                searching: true,
                 "processing": true,
                 scrollX:false,
                 "language": {
@@ -199,6 +206,32 @@
                 }
 
             });
+
+
+             
+             // Add event listener for opening and closing details
+             $('#assets-data-table tbody').on('click', 'td.details-control', function () {
+                 
+                 var tr = $(this).closest('tr');
+                 var row = oTable.row(tr);
+
+                 if (row.child.isShown()) {
+                     // This row is already open - close it
+                     //oTable.fnClose(tr);
+                     row.child.hide();
+                     tr.removeClass('shown');
+                 }
+                 else {
+                     // Open this row
+                     var catgID = row.data().CategoryID;
+                     $.get("CategoryProducts?CategoryID=" + catgID, function (emp) {
+                         oTable.fnOpen(tr, emp, 'details');
+                     });
+                     row.child(format(row.data())).show();
+                     tr.addClass('shown');
+                 }
+             });
+
         });
 
         function PopupForm(url) {
@@ -269,6 +302,26 @@
                 });
             }
         }
+
+        function format(d) {
+            // `d` is the original data object for the row
+            return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                '<tr>' +
+                '<td>Full name:</td>' +
+                '<td>' + d.CategoryName + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>Extension number:</td>' +
+                '<td>' + d.Description + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>Extra info:</td>' +
+                '<td>And any further details here (images etc)...</td>' +
+                '</tr>' +
+                '</table>';
+        }
+
+
 
 
         function ClosePopup() {

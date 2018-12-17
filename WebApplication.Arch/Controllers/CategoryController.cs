@@ -41,16 +41,34 @@ namespace WebApplication.Arch.Controllers
             return View();
         }
 
-
+        [HttpGet]
         public JsonResult GetCategories()
         {
             List<Category> Categories = oCategoryService.Queryable().ToList();
             List<Models.mCategory> mCatg = new List<Models.mCategory>();
             foreach (var o in Categories)
             {
-                mCatg.Add(new Models.mCategory { CategoryID = o.CategoryID, CategoryName = o.CategoryName, Description = o.Description });
+                Models.mCategory  omCatg= new Models.mCategory { CategoryID = o.CategoryID, CategoryName = o.CategoryName, Description = o.Description };
+                mCatg.Add(omCatg);
             }
             return Json(new { data = mCatg }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult CategoryProducts(int? CategoryID)
+        {
+            Category oCategory = oCategoryService.Find(CategoryID);// .Queryable().ToList();
+
+            Models.mCategory omCatg = new Models.mCategory { CategoryID = oCategory.CategoryID, CategoryName = oCategory.CategoryName, Description = oCategory.Description };
+            omCatg.Products = new List<Product>();
+
+            omCatg.Products.Add(new Product { ProductID = 1000 + omCatg.CategoryID, ProductName = omCatg.CategoryName + " - Prod 1", UnitPrice = 100 + omCatg.CategoryID });
+            omCatg.Products.Add(new Product { ProductID = 2000 + omCatg.CategoryID, ProductName = omCatg.CategoryName + " - Prod 2", UnitPrice = 200 + omCatg.CategoryID });
+            omCatg.Products.Add(new Product { ProductID = 3000 + omCatg.CategoryID, ProductName = omCatg.CategoryName + " - Prod 3", UnitPrice = 300 + omCatg.CategoryID });
+            omCatg.Products.Add(new Product { ProductID = 4000 + omCatg.CategoryID, ProductName = omCatg.CategoryName + " - Prod 4", UnitPrice = 400 + omCatg.CategoryID });
+            omCatg.Products.Add(new Product { ProductID = 5000 + omCatg.CategoryID, ProductName = omCatg.CategoryName + " - Prod 5", UnitPrice = 500 + omCatg.CategoryID });
+
+            return Json(new { data = omCatg.Products }, JsonRequestBehavior.AllowGet);
         }
 
 
